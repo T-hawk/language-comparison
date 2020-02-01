@@ -6,23 +6,23 @@
 
 - Languages to test
   * C
-    _ Q search
-    _ Binary search
+    - Q search
+    - Binary search
   * C++
-    _ Q search
-    _ Binary search
+    - Q search
+    - Binary search
   * Java
-    x Q search
-    _ Binary search
+    - Q search
+    - Binary search
   * Rust
-    _ Q search
-    _ Binary search
+    - Q search
+    - Binary search
   * Go
-    x Q search
-    _ Binary search
+    - Q search
+    - Binary search
   * Ruby
-    _ Q search
-    _ Binary search
+    - Q search
+    - Binary search
   * Python
-    _ Q search
-    _ Binary search
+    - Q search
+    - Binary search
