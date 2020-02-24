@@ -1,50 +1,46 @@
 #include <stdio.h>    
 
-int main() {
-  int sort[] = {0, 1, 4, 6};
-  int size;
-  size = sizeof(sort) / sizeof(sort[0]);
-  printf("%d\n", size);
-  quicksort(sort);
-  return 0;
+void swap(int* a, int* b) {
+  int t = *a;
+  *a = *b;
+  *b = t;
 }
 
-int quicksort(int array[])  {
-  printf("%d", (int) sizeof(array) / sizeof(array[0]));
-  if ((int) (sizeof(array) / sizeof(array[0])) <= 1) {
-      printf("hello there");
+int partition(int array[], int low, int high) {
+  int pivot = array[high];
+
+  int i = (low-1);
+
+  for (int j = low; j <= high-1; j++) {
+    if (array[j] < pivot) {
+      i++;
+      swap(&array[i], &array[j]);
+    }
   }
-  return 0;
+  swap(&array[i + 1], &array[high]);
+
+  return (i+1);
 }
 
-// int * getRandom( ) {
+void quicksort(int array[], int low, int high)  {
+  if (low < high) {
+    int pi = partition(array, low, high);
 
-//    static int  r[10];
-//    int i;
+    quicksort(array, low, pi-1);
+    quicksort(array, pi+1, high);
+  }
+}
 
-//    /* set the seed */
-//    srand( (unsigned)time( NULL ) );
-  
-//    for ( i = 0; i < 10; ++i) {
-//       r[i] = rand();
-//       printf( "r[%d] = %d\n", i, r[i]);
-//    }
+void printArray(int array[], int size) {
+  for (int i = 0; i < size; i++) {
+    printf("%d ", array[i]);
+  }
+}
 
-//    return r;
-// }
-
-// /* main function to call above defined function */
-// int main () {
-
-//    /* a pointer to an int */
-//    int *p;
-//    int i;
-
-//    p = getRandom();
-	
-//    for ( i = 0; i < 10; i++ ) {
-//       printf( "*(p + %d) : %d\n", i, *(p + i));
-//    }
-
-//    return 0;
-// }
+int main() {
+  int sort[] = {0, 1, 0, 6, 9, 1, 40};
+  int size = sizeof(sort) / sizeof(sort[0]);
+  quicksort(sort, 0, size-1);
+  printArray(sort, size);
+  return 0;
+}

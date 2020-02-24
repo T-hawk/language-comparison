@@ -6,23 +6,16 @@
 
 - Languages to test
   * C
-    - Q search
-    - Binary search
+    `time gcc QuickSort.c && ./a.out`
   * C++
-    - Q search
-    - Binary search
+    `time g++ QuickSort.cpp && ./a.out`
   * Java
-    - Q search
-    - Binary search
+    `time javac QuickSort.java && java QuickSort`
   * Rust
-    - Q search
-    - Binary search
+    `time rustc quick_sort.rs && ./a.out`
   * Go
-    - Q search
-    - Binary search
+    `time go run quicksort.go`
   * Ruby
-    - Q search
-    - Binary search
+    `time ruby quick_sort.rb`
   * Python
-    - Q search
-    - Binary search
+    `time python quick_sort.py`
