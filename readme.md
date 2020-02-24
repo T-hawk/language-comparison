@@ -1,8 +1,6 @@
 # Experminental design
 
-- Three different algorithms
-  * Quick search
-  * Binary search
+- Testing using the quicksort algorithm
 
 - Languages to test
   * C
